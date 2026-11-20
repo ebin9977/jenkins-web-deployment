@@ -30,8 +30,8 @@ pipeline {
             steps {
                 echo 'Deploying website to Apache server'
                 sh '''
-                    cp "$WORKSPACE/index.html" /var/www/html/index.html
-                    chmod 644 /var/www/html/index.html
+                   sudo cp "$WORKSPACE/index.html" /var/www/html/index.html
+                   sudo chmod 644 /var/www/html/index.html
                 '''
                 echo 'Deployment completed successfully'
             }
